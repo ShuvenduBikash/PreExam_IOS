@@ -17,6 +17,7 @@ class CreatePostVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        textField.delegate = self
 
         // Do any additional setup after loading the view.
     }
@@ -28,9 +29,16 @@ class CreatePostVC: UIViewController {
     
 
     @IBAction func closeBtnPressed(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
     }
     
 
     @IBAction func sendBtnPressed(_ sender: Any) {
+    }
+}
+
+extension CreatePostVC: UITextViewDelegate {
+    func textViewDidChange(_ textView: UITextView) {
+        //textView.text = ""
     }
 }
