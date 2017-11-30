@@ -134,6 +134,9 @@
                                                 <rect key="frame" x="0.0" y="171.5" width="180" height="48.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                 <state key="normal" title="by email"/>
+                                                <connections>
+                                                    <action selector="loginInWithEmalButtonPressed:" destination="3Dw-Eg-7Rb" eventType="touchUpInside" id="FrE-CY-pmC"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -171,7 +174,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A1G-vs-99q">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A1G-vs-99q">
                                 <rect key="frame" x="160" y="236" width="54" height="30"/>
                                 <state key="normal" title="SIGN IN"/>
                             </button>
@@ -210,6 +213,7 @@
                             <constraint firstItem="go4-dA-0uY" firstAttribute="top" secondItem="4nb-3O-pvy" secondAttribute="top" constant="70" id="9P2-Zx-vgw"/>
                             <constraint firstItem="4nb-3O-pvy" firstAttribute="trailing" secondItem="go4-dA-0uY" secondAttribute="trailing" constant="20" id="YXb-Vh-zpg"/>
                             <constraint firstItem="go4-dA-0uY" firstAttribute="leading" secondItem="4nb-3O-pvy" secondAttribute="leading" constant="20" id="mT6-hf-9qe"/>
+                            <constraint firstItem="A1G-vs-99q" firstAttribute="centerX" secondItem="3i8-kW-DRh" secondAttribute="centerX" id="toX-hz-fgZ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="4nb-3O-pvy"/>
                     </view>
