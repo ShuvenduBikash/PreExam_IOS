@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MeMC: UIViewController {
+class MeVC: UIViewController {
     
     @IBOutlet weak var emailLbl: UILabel!
     @IBOutlet weak var profileImage: UIImageView!

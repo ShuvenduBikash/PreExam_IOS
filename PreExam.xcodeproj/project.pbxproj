@@ -16,7 +16,7 @@
 		3064D2F71FD002DB009AF734 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3064D2F41FCFFFC9009AF734 /* GoogleService-Info.plist */; };
 		3064D3011FD0058B009AF734 /* DataServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3064D2FF1FD0058B009AF734 /* DataServices.swift */; };
 		3064D3021FD0058B009AF734 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3064D3001FD0058B009AF734 /* AuthService.swift */; };
-		30896DB61FD05DC000960FE2 /* MeMC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30896DB51FD05DC000960FE2 /* MeMC.swift */; };
+		30896DB61FD05DC000960FE2 /* MeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30896DB51FD05DC000960FE2 /* MeVC.swift */; };
 		30A950E21FD0076700470724 /* AuthVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A950E11FD0076700470724 /* AuthVC.swift */; };
 		30A950E41FD0077800470724 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A950E31FD0077800470724 /* LoginVC.swift */; };
 		7FC5CFC150B3DA608F206C44 /* Pods_PreExam.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 973BC5BA5DE783437579D8CD /* Pods_PreExam.framework */; };
@@ -34,7 +34,7 @@
 		3064D2F41FCFFFC9009AF734 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3064D2FF1FD0058B009AF734 /* DataServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataServices.swift; sourceTree = "<group>"; };
 		3064D3001FD0058B009AF734 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
-		30896DB51FD05DC000960FE2 /* MeMC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeMC.swift; sourceTree = "<group>"; };
+		30896DB51FD05DC000960FE2 /* MeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeVC.swift; sourceTree = "<group>"; };
 		30A950E11FD0076700470724 /* AuthVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthVC.swift; sourceTree = "<group>"; };
 		30A950E31FD0077800470724 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		973BC5BA5DE783437579D8CD /* Pods_PreExam.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PreExam.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -102,7 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				30A950E31FD0077800470724 /* LoginVC.swift */,
-				30896DB51FD05DC000960FE2 /* MeMC.swift */,
+				30896DB51FD05DC000960FE2 /* MeVC.swift */,
 				30A950E11FD0076700470724 /* AuthVC.swift */,
 				3064D2E21FCFFE71009AF734 /* FeedVC.swift */,
 				3064D2E41FCFFE71009AF734 /* GroupVC.swift */,
@@ -292,7 +292,7 @@
 				3064D3021FD0058B009AF734 /* AuthService.swift in Sources */,
 				3064D2E31FCFFE71009AF734 /* FeedVC.swift in Sources */,
 				3064D3011FD0058B009AF734 /* DataServices.swift in Sources */,
-				30896DB61FD05DC000960FE2 /* MeMC.swift in Sources */,
+				30896DB61FD05DC000960FE2 /* MeVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
