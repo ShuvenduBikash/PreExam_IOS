@@ -177,11 +177,16 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A1G-vs-99q">
                                 <rect key="frame" x="160" y="236" width="54" height="30"/>
                                 <state key="normal" title="SIGN IN"/>
+                                <connections>
+                                    <action selector="signInButtonWasPressed:" destination="6hA-vS-23H" eventType="touchUpInside" id="t5U-Xj-T2L"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ey5-6m-ey2">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ey5-6m-ey2">
                                 <rect key="frame" x="165" y="617" width="45" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="cancel"/>
+                                <connections>
+                                    <action selector="closeButtonWasPressed:" destination="6hA-vS-23H" eventType="touchUpInside" id="Jsf-QA-bTy"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="go4-dA-0uY">
                                 <rect key="frame" x="20" y="90" width="335" height="121"/>
@@ -211,12 +216,18 @@
                         <constraints>
                             <constraint firstItem="A1G-vs-99q" firstAttribute="top" secondItem="go4-dA-0uY" secondAttribute="bottom" constant="25" id="65Q-5t-DWF"/>
                             <constraint firstItem="go4-dA-0uY" firstAttribute="top" secondItem="4nb-3O-pvy" secondAttribute="top" constant="70" id="9P2-Zx-vgw"/>
+                            <constraint firstItem="4nb-3O-pvy" firstAttribute="bottom" secondItem="Ey5-6m-ey2" secondAttribute="bottom" constant="20" id="Hfy-1N-NUM"/>
+                            <constraint firstItem="Ey5-6m-ey2" firstAttribute="centerX" secondItem="3i8-kW-DRh" secondAttribute="centerX" id="ThY-k7-rzC"/>
                             <constraint firstItem="4nb-3O-pvy" firstAttribute="trailing" secondItem="go4-dA-0uY" secondAttribute="trailing" constant="20" id="YXb-Vh-zpg"/>
                             <constraint firstItem="go4-dA-0uY" firstAttribute="leading" secondItem="4nb-3O-pvy" secondAttribute="leading" constant="20" id="mT6-hf-9qe"/>
                             <constraint firstItem="A1G-vs-99q" firstAttribute="centerX" secondItem="3i8-kW-DRh" secondAttribute="centerX" id="toX-hz-fgZ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="4nb-3O-pvy"/>
                     </view>
+                    <connections>
+                        <outlet property="emailField" destination="SsV-Z9-iDJ" id="UJY-wL-vn9"/>
+                        <outlet property="passwordField" destination="A4P-F4-u2b" id="LJN-Tc-ooe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J2N-Fd-ZiT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
