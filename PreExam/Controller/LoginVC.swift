@@ -15,7 +15,8 @@ class LoginVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        emailField.delegate = self
+        passwordField.delegate = self
     }
 
     override func didReceiveMemoryWarning() {
@@ -25,10 +26,33 @@ class LoginVC: UIViewController {
     
 
     @IBAction func signInButtonWasPressed(_ sender: Any) {
+        if emailField.text != nil && passwordField.text != nil{
+            AuthService.instance.loginUser(withEmail: emailField.text!, andPassword: passwordField.text!, loginComplere: { (success, loginError) in
+                if success {
+                    self.dismiss(animated: true, completion: nil)
+                } else {
+                    print(String(describing: loginError?.localizedDescription))
+                }
+                
+                AuthService.instance.registerUser(withEmail: self.emailField.text!, andPassword: self.passwordField.text!, userCreationComplete: { (success, regError) in
+                    if success {
+                        AuthService.instance.loginUser(withEmail: self.emailField.text!, andPassword: self.passwordField.text!, loginComplere: { (success, nil) in
+                            print("Successfully registered user")
+                            self.dismiss(animated: true, completion: nil)
+                        })
+                    }
+                })
+            })
+        }
     }
     
     @IBAction func closeButtonWasPressed(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
+    
+}
+
+
+extension LoginVC: UITextFieldDelegate{
     
 }
