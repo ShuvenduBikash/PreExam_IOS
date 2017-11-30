@@ -85,7 +85,7 @@
         <!--Me-->
         <scene sceneID="0Td-2g-773">
             <objects>
-                <viewController id="ond-qk-fWh" sceneMemberID="viewController">
+                <viewController id="ond-qk-fWh" customClass="MeMC" customModule="PreExam" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jqS-xZ-QfZ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -139,6 +139,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xTt-B4-DFJ">
                                         <rect key="frame" x="346" y="34" width="19" height="22"/>
                                         <state key="normal" image="logoutIcon"/>
+                                        <connections>
+                                            <action selector="signOutBtnWasPressed:" destination="ond-qk-fWh" eventType="touchUpInside" id="swX-tX-9MO"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_me" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CdF-9z-19J">
                                         <rect key="frame" x="153" y="35" width="70" height="20"/>
@@ -179,6 +182,11 @@
                         <viewLayoutGuide key="safeArea" id="Rq1-8y-79H"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Me" image="me-tabIcon" id="keN-gx-bNy"/>
+                    <connections>
+                        <outlet property="emailLbl" destination="u40-b7-3xi" id="jqN-YZ-vMt"/>
+                        <outlet property="profileImage" destination="tPh-eM-wH3" id="Ql0-mE-Q07"/>
+                        <outlet property="tableView" destination="08w-PY-qeI" id="aBy-0g-qNP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pyp-mR-AR4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
