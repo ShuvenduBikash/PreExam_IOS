@@ -13,6 +13,7 @@
 		3064D2E81FCFFE71009AF734 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3064D2E61FCFFE71009AF734 /* Main.storyboard */; };
 		3064D2EA1FCFFE71009AF734 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3064D2E91FCFFE71009AF734 /* Assets.xcassets */; };
 		3064D2ED1FCFFE71009AF734 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3064D2EB1FCFFE71009AF734 /* LaunchScreen.storyboard */; };
+		3064D2F71FD002DB009AF734 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3064D2F41FCFFFC9009AF734 /* GoogleService-Info.plist */; };
 		7FC5CFC150B3DA608F206C44 /* Pods_PreExam.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 973BC5BA5DE783437579D8CD /* Pods_PreExam.framework */; };
 /* End PBXBuildFile section */
 
@@ -72,6 +73,7 @@
 		3064D2DF1FCFFE71009AF734 /* PreExam */ = {
 			isa = PBXGroup;
 			children = (
+				3064D2F41FCFFFC9009AF734 /* GoogleService-Info.plist */,
 				3064D2E01FCFFE71009AF734 /* AppDelegate.swift */,
 				3064D2E21FCFFE71009AF734 /* FirstViewController.swift */,
 				3064D2E41FCFFE71009AF734 /* SecondViewController.swift */,
@@ -79,7 +81,6 @@
 				3064D2E91FCFFE71009AF734 /* Assets.xcassets */,
 				3064D2EB1FCFFE71009AF734 /* LaunchScreen.storyboard */,
 				3064D2EE1FCFFE71009AF734 /* Info.plist */,
-				3064D2F41FCFFFC9009AF734 /* GoogleService-Info.plist */,
 			);
 			path = PreExam;
 			sourceTree = "<group>";
@@ -156,6 +157,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3064D2ED1FCFFE71009AF734 /* LaunchScreen.storyboard in Resources */,
+				3064D2F71FD002DB009AF734 /* GoogleService-Info.plist in Resources */,
 				3064D2EA1FCFFE71009AF734 /* Assets.xcassets in Resources */,
 				3064D2E81FCFFE71009AF734 /* Main.storyboard in Resources */,
 			);
