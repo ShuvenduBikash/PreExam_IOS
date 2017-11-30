@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13189.4" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="peR-AO-79d">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13189.4" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -28,6 +28,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UVo-zF-EtI">
                                         <rect key="frame" x="344" y="33" width="21" height="24"/>
                                         <state key="normal" image="compose"/>
+                                        <connections>
+                                            <segue destination="peR-AO-79d" kind="presentation" id="n9Y-am-A6O"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_Feed" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2tj-C1-79T">
                                         <rect key="frame" x="153" y="35" width="70" height="20"/>
@@ -82,10 +85,10 @@
             </objects>
             <point key="canvasLocation" x="749.60000000000002" y="-320.68965517241384"/>
         </scene>
-        <!--View Controller-->
+        <!--Create PostVC-->
         <scene sceneID="aL7-hY-vyK">
             <objects>
-                <viewController id="peR-AO-79d" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CreatePostVC" id="peR-AO-79d" customClass="CreatePostVC" customModule="PreExam" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xTC-pU-C8f">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -109,6 +112,9 @@
                                             <constraint firstAttribute="height" constant="20" id="kUW-q7-PVs"/>
                                         </constraints>
                                         <state key="normal" image="close"/>
+                                        <connections>
+                                            <action selector="closeBtnPressed:" destination="peR-AO-79d" eventType="touchUpInside" id="yuH-zf-Jc2"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.33456498159999998" green="0.40559442239999999" blue="0.75610723349999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -148,6 +154,9 @@
                                 <state key="normal" title=" Send" image="send">
                                     <color key="titleColor" red="0.30201682448387146" green="0.7496916651725769" blue="0.33211535215377808" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="sendBtnPressed:" destination="peR-AO-79d" eventType="touchUpInside" id="NzA-OX-7Dh"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -169,6 +178,12 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="D6b-x3-DgT"/>
                     </view>
+                    <connections>
+                        <outlet property="emailLbl" destination="Jkf-D7-lW9" id="QMi-cd-TFG"/>
+                        <outlet property="profileImage" destination="gC9-sA-JqP" id="u4y-VN-ScY"/>
+                        <outlet property="sendBtn" destination="Qd6-7T-tEM" id="HXY-l1-IuG"/>
+                        <outlet property="textField" destination="wMc-xd-l5m" id="TZl-wI-Ya3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HWN-cn-gW1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
