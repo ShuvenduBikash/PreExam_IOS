@@ -47,7 +47,7 @@ extension FeedVC: UITableViewDelegate, UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "feedCell") as? FeedCell else
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "feedCell") as? FeedCellTableViewCell else
         {return UITableViewCell()}
         
         let image = UIImage(named: "defaultProfileImage")

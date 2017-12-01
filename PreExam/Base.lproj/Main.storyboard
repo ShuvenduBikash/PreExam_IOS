@@ -5,6 +5,7 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13165.3"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -17,7 +18,7 @@
         <!--Feed-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
-                <viewController storyboardIdentifier="FeedVC" id="9pv-A4-QxB" customClass="FeedVC" customModule="PreExam" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="9pv-A4-QxB" customClass="FeedVC" customModule="PreExam" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tsR-hK-woN" customClass="FeedVC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -56,13 +57,55 @@
                                 <rect key="frame" x="0.0" y="70" width="375" height="548"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="100" id="hon-Qh-yhh">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="feedCell" rowHeight="100" id="hon-Qh-yhh" customClass="FeedCellTableViewCell" customModule="PreExam" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hon-Qh-yhh" id="eSc-ax-hGx">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defaultProfileImage" translatesAutoresizingMaskIntoConstraints="NO" id="4b5-3Y-yNC">
+                                                    <rect key="frame" x="10" y="10" width="50" height="50"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="50" id="SGg-M3-IXt"/>
+                                                        <constraint firstAttribute="width" constant="50" id="YaV-rJ-jmg"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="ARQ-wT-lqP">
+                                                    <rect key="frame" x="70" y="18" width="287" height="63.5"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="user@host.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p3z-Ij-iXm">
+                                                            <rect key="frame" x="0.0" y="0.0" width="287" height="20"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="20" id="xDp-j7-zkk"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="18"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Message content" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NLX-i8-Qdf">
+                                                            <rect key="frame" x="0.0" y="25" width="287" height="38.5"/>
+                                                            <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="10"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="ARQ-wT-lqP" firstAttribute="top" secondItem="eSc-ax-hGx" secondAttribute="topMargin" constant="10" id="3ct-UB-o5i"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="ARQ-wT-lqP" secondAttribute="trailing" constant="10" id="LQl-gi-nY4"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="ARQ-wT-lqP" secondAttribute="bottom" constant="10" id="Qi7-Cb-JdJ"/>
+                                                <constraint firstItem="4b5-3Y-yNC" firstAttribute="top" secondItem="eSc-ax-hGx" secondAttribute="top" constant="10" id="kr4-v5-XhQ"/>
+                                                <constraint firstItem="4b5-3Y-yNC" firstAttribute="leading" secondItem="eSc-ax-hGx" secondAttribute="leading" constant="10" id="vcM-hw-HI0"/>
+                                                <constraint firstItem="ARQ-wT-lqP" firstAttribute="leading" secondItem="4b5-3Y-yNC" secondAttribute="trailing" constant="10" id="wqR-iy-zWo"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="contentLbl" destination="NLX-i8-Qdf" id="Bkt-2k-h3k"/>
+                                            <outlet property="emailLbl" destination="p3z-Ij-iXm" id="ewe-Zx-fu8"/>
+                                            <outlet property="profileImage" destination="4b5-3Y-yNC" id="4en-I0-KgL"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
